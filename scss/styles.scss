@@ -3,7 +3,13 @@
 @import "mixins";
 
 #main-nav{
-	background: $deepBlue;
+	background: $frenchFlag1;
+	border-bottom:3px solid $frenchFlag2;
+	border-bottom:3px solid $frenchFlag3;
+	position:fixed;
+	top: 0;
+	z-index:2;
+	width: 100%;
 	ul{
 		width: 100%;
 		margin:0;
@@ -18,23 +24,29 @@
 		}
 	}
 
-	a{
+	a {
 		color: $offWhite;
 		text-decoration: none;
 		padding: 16px;
 		display: block;
 		text-align: center;
 		&:hover{
-			background: lighten($deepBlue, 5);
+			background: lighten($frenchFlag1, 5);
 		}
 	}
 }// end main-nav
 
 section h1 {
 	font-size: $sectionHeading;
-	color: $deepBlue;
+	color: $frenchFlag1;
 }
 
+#overlay{
+	position: relative;
+	top:0;
+	background: $overlay;
+	z-index: 3;
+}
 .lead-banner{
 	@include banner;
 	text-align: right;
@@ -55,6 +67,28 @@ section h1 {
 	}
 }
 
+#louvre-img{
+		background-image: url('../img/louvre.jpeg');
+		background-size:cover;
+		background-position: center center;
+		position:relative;
+		height: 50vh;
+		top:0;
+		bottom:0;
+		z-index:-1;
+	}
+
+	#overlay{
+		position:absolute;
+		background-color: $overlay;
+		top:0;
+		bottom:0;
+		height: 100%;
+		width: 100%;
+		z-index:1;
+	}
+
+
 #services{
 	margin-bottom: 60px;
 
@@ -65,19 +99,20 @@ section h1 {
 		width: (100% / 3);
 	}
 
-	img{
-		width: 60%;
-		margin:20px 20%;
-	}
+	//img{
+	//	width: 60%;
+	//	margin:20px 20%;
+	//}
 
-	a {
+	/*a {
 		text-decoration: none;
 		color: $deepBlue;
 		font-weight: bold;
 		&:hover{
 			color: complement($deepBlue);
 		}
-	}
+	}*/
+
 
 	ul{
 		@include clearFix;
