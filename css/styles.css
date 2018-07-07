@@ -30,7 +30,13 @@ li {
 }
 
 #main-nav {
-  background: #032f3e;
+  background: #0055A4;
+  border-bottom: 3px solid #FFFFFF;
+  border-bottom: 3px solid #EF4135;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
 }
 
 #main-nav ul {
@@ -64,12 +70,19 @@ li {
 }
 
 #main-nav a:hover {
-  background: #044156;
+  background: #0062be;
 }
 
 section h1 {
   font-size: 24px;
-  color: #032f3e;
+  color: #0055A4;
+}
+
+#overlay {
+  position: relative;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3;
 }
 
 .lead-banner {
@@ -153,8 +166,37 @@ section h1 {
   margin: 60px 0;
 }
 
+#louvre-img {
+  background-image: url("../img/louvre.jpeg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  height: 50vh;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
 #services {
   margin-bottom: 60px;
+  /*a {
+		text-decoration: none;
+		color: $deepBlue;
+		font-weight: bold;
+		&:hover{
+			color: complement($deepBlue);
+		}
+	}*/
 }
 
 #services li {
@@ -163,21 +205,6 @@ section h1 {
   box-sizing: border-box;
   text-align: center;
   width: 33.33333%;
-}
-
-#services img {
-  width: 60%;
-  margin: 20px 20%;
-}
-
-#services a {
-  text-decoration: none;
-  color: #032f3e;
-  font-weight: bold;
-}
-
-#services a:hover {
-  color: #3e1203;
 }
 
 #services ul:after {
