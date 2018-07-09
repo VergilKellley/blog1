@@ -10,6 +10,7 @@
 	top: 0;
 	z-index:2;
 	width: 100%;
+	font-size: 20px;
 	ul{
 		width: 100%;
 		margin:0;
@@ -18,7 +19,7 @@
 
 	li{
 		float: left;
-		width: (100% / 6);
+		width: (100% / 7);
 		@include mQ(600px){
 			width: 100%;
 		}
@@ -34,7 +35,36 @@
 			background: lighten($frenchFlag1, 5);
 		}
 	}
-}// end main-nav
+}// end main-nav 
+
+#side-menu{
+	position:absolute;
+	top:80px;
+	width:250px;
+	height:400px;
+	
+	
+}
+
+nav{
+	height:70px;
+}
+
+#side-menu  a {
+	
+	width:250px;
+	position:relative;
+	color:black;
+	top:80px;
+	left:20px;
+	height:500px;
+}
+
+#side-menu, ul{
+	height:400px;
+}
+
+
 
 section h1 {
 	font-size: $sectionHeading;
@@ -53,6 +83,7 @@ section h1 {
 }
 
 #main-img{
+	position:relative;
 	width:100%;
 	height: 100vh;
 }
@@ -61,7 +92,7 @@ section h1 {
 	@include banner;
 	li{
 		text-transform: uppercase;
-		font-size: 20px;
+		font-size: 40px;
 		max-width: 500px;
 		margin: 60px 0;
 	}
