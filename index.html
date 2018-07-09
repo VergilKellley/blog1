@@ -11,20 +11,51 @@
   </head>
   <body>
     <header>
-      <nav id="main-nav">
+        <nav id="main-nav">
         <div class="wrapper">
+
+
           <ul>
-            <li><a href="#">Small World</a></li>
-            <li><a href="#">About Paris</a></li>
-            <li><a href="#">Travel Tips</a></li>
+           <li> <span class="open-slide">
+          <a href="#" onclick="openSlideMenu()">
+            <svg width="30" height="30">
+              <path d ="M0,5 30,5" stroke="#000" stroke-width="3"/>
+              <path d ="M0,14 30,14" stroke="#000" stroke-width="3"/>
+              <path d ="M0,23 30,23" stroke="#000" stroke-width="3"/>
+            </svg>
+          </a>
+        </span></li>
+        
+            <li><a href="#">good</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Tips</a></li>
             <li><a href="#">Photos</a></li>
             <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" >Contact</a></li>
           </ul>
+          
+        
         </div>
+
+
       </nav>
-      <div class="lead-banner">
-        <img id="main-img" src="img/eiffel-tower.jpeg" />
+
+      <nav>
+      <div id="side-menu">
+             <a  href="#" onclick="closeSlideMenu()">&times;</a>
+            
+          </div>
+          </nav>
+      
+      
+
+      
+    
+
+    
+    
+  <div class="lead-banner">     
+      <img id="main-img" src="img/eiffel-tower.jpeg" />
         <div class="banner-content">
           <div class="wrapper">
             <span class="title">Paris</span>
@@ -32,7 +63,8 @@
           </div>
         </div>
       </div>
-    </header>
+</header>
+
     <section id="services">
       <div class="wrapper">
         <h1>city of lights</h1>
@@ -78,10 +110,10 @@
     <section id="projects">
       <div class="wrapper">
         <a style="text-decoration: none;" href="https://www.louvre.fr/en" target="_blank"><h1>Louvre Official Website</h1></a>
-        <ul>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
+        <ul id="photos">
+          <li><img src="img/arc.jpeg" style="width: 270px; height: 270px;" /></li>
+          <li><img src="img/domedChurch.jpeg" style="width: 270px; height: 270px;"/></li>
+          <li><img src="img/moulinRouge.jpeg" style="width: 270px; height: 270px;"/></li>
           <li><img src="http://placehold.it/150x150" /></li>
           <li><img src="http://placehold.it/150x150" /></li>
           <li><img src="http://placehold.it/150x150" /></li>
@@ -94,5 +126,25 @@
         </ul>
       </div>
     </section>
+
+    <script>
+      
+        function openSlideMenu(){
+          document.getElementById('side-menu').style.width="250px";
+        }
+
+        function openSlideMenu(){
+          document.getElementById('main-img').style.marginLeft="250px";
+        }
+
+         function closeSlideMenu(){
+          document.getElementById('side-menu').style.width="0";
+        }
+
+        function closeSlideMenu(){
+          document.getElementById('main-img').style.marginLeft="0";
+        }
+
+    </script>
   </body>
 </html>
