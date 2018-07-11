@@ -7,63 +7,91 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="Vergil Kelley">
+
     <link href="css/styles.css" type="text/css" rel="stylesheet"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <style>
+
+      
+
+        nav.navbar{
+          position: fixed;
+          top: 25%;
+          z-index: 4;
+
+        }
+      
+        .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 10%;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 45%; /* Full height */
+        position: fixed; /* Make it stick, even on scroll */
+        z-index: 4;
+      }
+
+      li a {
+    display: block;
+    color: #fff;
+    padding: 15px 16px;
+    text-decoration: none;
+    }
+
+    li a.active {
+        background-color: #0055A4;
+        opacity: 0.7;
+        color: white;
+      
+    }
+
+    li a:hover:not(.active) {
+        background-color: #0055A4;
+        color:#EF4135 ;
+    }
+
+    .lead-banner{
+      position: relative;
+      top: 0;
+    }
+
+    </style>
   </head>
   <body>
-    <header>
-        <nav id="main-nav">
-        <div class="wrapper">
-
-
-          <ul>
-           <li> <span class="open-slide">
-          <a href="#" onclick="openSlideMenu()">
-            <svg width="30" height="30">
-              <path d ="M0,5 30,5" stroke="#000" stroke-width="3"/>
-              <path d ="M0,14 30,14" stroke="#000" stroke-width="3"/>
-              <path d ="M0,23 30,23" stroke="#000" stroke-width="3"/>
-            </svg>
-          </a>
-        </span></li>
-        
-            <li><a href="#">good</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Tips</a></li>
-            <li><a href="#">Photos</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#" >Contact</a></li>
-          </ul>
-          
-        
-        </div>
-
-
-      </nav>
-
-      <nav>
-      <div id="side-menu">
-             <a  href="#" onclick="closeSlideMenu()">&times;</a>
-            
-          </div>
-          </nav>
-      
-      
-
-      
-    
-
-    
-    
-  <div class="lead-banner">     
-      <img id="main-img" src="img/eiffel-tower.jpeg" />
-        <div class="banner-content">
-          <div class="wrapper">
-            <span class="title">Paris</span>
-            <span class="sub-title"></span>
+     
+    <!------- Navagation ----------->
+       <div class="container-fluid" >
+          <div class="row" >
+            <div class="col-md-12">
+              <nav class="navbar">
+                <ul>
+                  <li><a  href="#home">Home</a></li>
+                  <li><a href="#amsterdam"">Amsterdam</a></li>
+                  <li><a href="#barcelona">Barcelona</a></li>
+                  <li><a class="active" href="#active">Paris</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-</header>
+       
+    <!----------------Main Photo Eiffel Tower------------------------>
+        <div class="lead-banner">     
+            <img id="main-img" src="img/eiffel-tower.jpeg" alt="eiffel-tower" />
+              <div class="banner-content">
+                <div class="wrapper">
+                  <span class="title">Paris</span>
+                </div>
+              </div>
+            </div>
+      </header>
 
     <section id="services">
       <div class="wrapper">
@@ -129,21 +157,6 @@
 
     <script>
       
-        function openSlideMenu(){
-          document.getElementById('side-menu').style.width="250px";
-        }
-
-        function openSlideMenu(){
-          document.getElementById('main-img').style.marginLeft="250px";
-        }
-
-         function closeSlideMenu(){
-          document.getElementById('side-menu').style.width="0";
-        }
-
-        function closeSlideMenu(){
-          document.getElementById('main-img').style.marginLeft="0";
-        }
 
     </script>
   </body>
