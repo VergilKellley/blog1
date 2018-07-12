@@ -9,15 +9,79 @@
   <meta name="author" content="Vergil Kelley">
 
     <link href="css/styles.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <style>
+        *{
+          padding: 0;
+          margin:0;
+        }
+        body
+            {
 
-      
+          font-size: 1.2vw;
+            }
+          #flag-container{
+          position: relative;
+          height: 100vh;
+        }
+        
+        /* french flag background*/ 
+        #french-flag{
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          z-index: -1;
+        }
 
+      /*  'Paris France' text */
+       div h2{
+        position: absolute;
+        color: #fff;
+        top: 30%;
+        left: 9%;
+        font-size: 2em;
+        z-index: 2;
+       }
+
+       /* city of lights text */
+       #city-of-lights{
+        position: absolute;
+        color: #fff;
+        font-size: 1em;
+        top: 40%;
+        left: 9%;
+        z-index: 2;
+       }
+
+       /* top paris-text */
+       #paris-text{
+        position: absolute;
+        color: #fff;
+        top: 45%;
+        left: 9%;
+        width: 16%;
+        z-index: 2;
+       }
+
+       /* over-lay over flag for text*/
+        #flag-text-overlay{
+        top: 27%;
+        width: 20%;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 60%;
+        position: absolute; 
+        z-index: 1;
+        left: 8%;
+        }
+
+        /* Navigation*/
         nav.navbar{
           position: fixed;
           top: 25%;
@@ -29,17 +93,19 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+        top: 15%;
         width: 10%;
         background-color: rgba(0, 0, 0, 0.5);
-        height: 48%;
+        height: 51%;
         position: fixed; 
-        z-index: 4;
+        z-index: 1;
+        left: 85%;
       }
 
       li a {
     display: block;
     color: #fff;
-    padding: 15px 16px;
+    padding: 10% 10%;
     text-decoration: none;
     }
 
@@ -55,15 +121,87 @@
         color:#EF4135 ;
     }
 
-    /*.lead-banner{
+    /* black background at top */
+    .top-bg{
+      position: absolute;
+      top: 5%;
+      left: 35%;
+      width: 55%;
+      height: 80vh;
+      background-color: #000;
+    }
+
+    /* above photo description */
+    #above{
+      font-style: italic;
+      position: absolute;
+      color: #fff;
+      left: 67%;
+      bottom: 12%;
+    }
+
+    /* left photo description */
+    #left{
+      font-style: italic;
+      position: absolute;
+      color: #fff;
+      left: 58%;
+      bottom: 3%;
+    }
+    
+    /* main top section photo */
+    #top-photo{
+      position: absolute;
+      top: 18%;
+      height: 70vh;
+      width: 70%;
+      left: -14%;
+      z-index: 3;
+    }
+
+    /* background photo at top */
+    .bg-photos{
+      position: absolute;
+      top: 3%;
+      height: 60vh;
+      width: 45%;
+      left: 42%;
+      z-index: 2;
+    }
+
+    /* mid section text */
+    #mid-section-text {
       position: relative;
-      top: 0;
-    }*/
+      margin-top: 10%;
+      font-size: 4vw;
+      color: lightgray;
+      text-align: center;
+      height: 300px;
+    }
+
+    /* mid section photo */
+
+    #mid-section-photo{
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      border-top: 3px solid #000;
+      border-bottom: 3px solid #000;
+    }
+
+    .photos{
+      position: relative;
+      margin-top: 20px;
+      width: 100%;
+      height: 155px;
+    }
+
+    
 
     </style>
   </head>
   <body>
-     
+
     <!------- Navagation ----------->
        <div class="container-fluid" >
           <div class="row" >
@@ -75,72 +213,117 @@
                   <li><a href="#barcelona">Barcelona</a></li>
                   <li><a class="active" href="#active">Paris</a></li>
                   <li><a href="#about">About</a></li>
-                  <li><a href="#contact">Contact</a>
+                  <li><a href="#contact">Contact</a></li>
                 </ul>
               </nav>
             </div>
           </div>
         </div>
-       
-    <!----------------Main Photo Eiffel Tower------------------------>
-        <div class="lead-banner">     
-            <img id="main-img" src="img/eiffel-tower.jpeg" alt="eiffel-tower" />
-              <div class="banner-content">
-                <div class="wrapper">
-                  <span class="title">Paris</span>
-                </div>
+
+        <!-------------------Top Background color---------------------->
+      <div class="container-fluid" id="flag-container">
+        <div class="row">
+          <div class="col-md-12">
+            <img id="french-flag" src="img/french-flag.jpg">
+             <div class="top-bg">
+               <p id="above"><span>Above</span>
+              : Eiffel Tower</p>
+               <p id="left"><span>Left</span>
+              : Louvre Museum</p>
+              <img class="bg-photos" src="img/eiffel-tower.jpeg">\
+              <img id="top-photo" src="img/louvre.jpg">
+             </div>
+
+               <div id="flag-text-overlay"></div>
+
+              <div>
+                <h2 id="paris-france">Paris France</h2>
+                <p id="city-of-lights">City of Lights</p>
+                <p id="paris-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut.</p>
               </div>
-            </div>
-      </header>
-
-      <!----------- Main text----------------------------->
-        <section id="services">
-          <div class="wrapper">
-            <h1>city of lights</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </section>
-
-        <!--------------Secondary image Louvre Museum section----------------------->
-        <div class="lessons-banner" >
-          <div id="louvre-img" >
-            <div id="overlay"></div>
-          </div>
-          <!--<img src="img/louvre.jpeg" />-->
-          <div class="banner-content" >
-            <div class="wrapper">
-              <span class="title">Louvre Museum</span>
-              <span class="sub-title"></span>
-            </div>
           </div>
         </div>
-        <section id="projects">
-          <div class="wrapper">
-            <a style="text-decoration: none;" href="https://www.louvre.fr/en" target="_blank"><h1>Louvre Official Website</h1></a>
-            <ul id="photos">
-              <li><img src="img/arc.jpeg" alt="arc de triumph paris france" style="width: 270px; height: 270px;" /></li>
-              <li><img alt="sacre coure paris france" src="img/domedchurch.jpeg" style="width: 270px; height: 270px;"/></li>
-              <li><img alt="moulinRouge paris france" src="img/moulinRouge.jpeg" style="width: 270px; height: 270px;"/></li>
-              <li><img src="img/louvre.jpg" alt="louvre museum at night paris france" style="width: 270px; height: 270px;" /></li>
-              <li><img alt="bike chaned to pole paris france" src="img/bike.jpeg" style="width: 270px; height: 270px;"/></li>
-              <li><img src="img/dinner-table.jpeg" alt="dinner table at outdoor cafe paris france" style="width: 270px; height: 270px;" /></li>
-              <li><img src="http://placehold.it/150x150" /></li>
-              <li><img src="http://placehold.it/150x150" /></li>
-              <li><img src="http://placehold.it/150x150" /></li>
-              <li><img src="http://placehold.it/150x150" /></li>
-              <li><img src="http://placehold.it/150x150" /></li>
-              <li><img src="http://placehold.it/150x150" /></li>
-            </ul>
+      </div>
+
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+              <p id="mid-section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              </p>
           </div>
-        </section>
+        </div>
+      </div>
 
-        <script>
-          
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <img id="mid-section-photo" src="img/arc.jpeg">
+          </div>
+        </div>
+      </div>
 
-        </script>
-  </body>
+
+      <div class="container-fluid" class="photos">
+        <div class="row">
+          <div class="col-md-3">
+            <img class="photos" id="photo" src="img/streets.jpeg" alt="paris streets">
+          </div>
+
+          <div class="col-md-3">
+            <img class="photos" src="img/bike.jpeg" alt="bike chained to pole">
+          </div>
+
+          <div class="col-md-3">
+            <img class="photos" src="img/notre-dam.jpeg" alt="notre dam">
+          </div>
+
+          <div class="col-md-3">
+            <img class="photos" src="img/moulinRouge.jpeg" alt="moulinRouge">
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <img class="photos" src="img/streets.jpeg" alt="paris streets">
+          </div>
+
+          <div class="col-md-3">
+            <img class="photos" src="img/bike.jpeg" alt="bike chained to pole">
+          </div>
+
+          <div class="col-md-3">
+            <img class="photos" src="img/notre-dam.jpeg" alt="notre dam">
+          </div>
+
+          <div class="col-md-3">
+            <img class="photos" src="img/moulinRouge.jpeg" alt="moulinRouge">
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" class="photos">
+        <div class="row">
+          <div class="col-md-3">
+            <img class="photos" src="img/streets.jpeg" alt="paris streets">
+          </div>
+
+          <div class="col-md-3">
+            <img class="photos" src="img/bike.jpeg" alt="bike chained to pole">
+          </div>
+
+          <div class="col-md-3">
+            <img class="photos" src="img/notre-dam.jpeg" alt="notre dam">
+          </div>
+
+          <div class="col-md-3">
+            <img class="photos" src="img/moulinRouge.jpeg" alt="moulinRouge">
+          </div>
+        </div>
+      </div>
+</body>
 </html>
