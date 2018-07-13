@@ -7,7 +7,7 @@ echo '<!doctype html>
   <meta http-equiv="X-UA-Compatible" content="ie-edge">
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <meta name="author" content="Vergil Kelley">
+  <meta name="author" content="Vergil D. Kelley">
 
     <link href="css/styles.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
