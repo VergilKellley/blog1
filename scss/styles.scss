@@ -2,157 +2,183 @@
 @import "variables";
 @import "mixins";
 
-#main-nav{
-	background: $frenchFlag1;
-	border-bottom:3px solid $frenchFlag2;
-	border-bottom:3px solid $frenchFlag3;
-	position:fixed;
-	top: 0;
-	z-index:2;
-	width: 100%;
-	font-size: 20px;
-	ul{
-		width: 100%;
-		margin:0;
-		@include clearFix;
-	}
 
-	li{
-		float: left;
-		width: (100% / 7);
-		@include mQ(600px){
-			width: 100%;
-		}
-	}
-
-	a {
-		color: $offWhite;
-		text-decoration: none;
-		padding: 16px;
-		display: block;
-		text-align: center;
-		&:hover{
-			background: lighten($frenchFlag1, 5);
-		}
-	}
-}// end main-nav 
-
-#side-menu{
-	position:absolute;
-	top:80px;
-	width:250px;
-	height:400px;
-	
-	
+body{
+	font-size: 1.2vw;
 }
 
-nav{
-	height:70px;
-}
+// navagation
+.navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        top: 15%;
+        width: 10%;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 51%;
+        position: fixed; 
+        z-index: 1;
+        left: 85%;
 
-#side-menu  a {
-	
-	width:250px;
-	position:relative;
-	color:black;
-	top:80px;
-	left:20px;
-	height:500px;
-}
+li a {
+    display: block;
+    color: #fff;
+    padding: 10% 10%;
+    
+    }
 
-#side-menu, ul{
-	height:400px;
-}
+li a.active {
+        background-color: $frenchFlagRed;
+        opacity: 0.7;
+        color: #fff;
+        text-decoration: none;
+        
+    }
 
+    li a:hover:not(.active) {
+        background-color: $frenchFlagBlue;
+        color: $frenchFlagRed;
+        text-decoration: none;
+    }
+      }
 
-
-section h1 {
-	font-size: $sectionHeading;
-	color: $frenchFlag1;
-}
-
-#overlay{
+// flag container
+#flag-container{
 	position: relative;
-	top:0;
-	background: $overlay;
-	z-index: 3;
-}
-.lead-banner{
-	@include banner;
-	text-align: right;
-}
-
-#main-img{
-	position:relative;
-	width:100%;
 	height: 100vh;
-}
 
-.lessons-banner{
-	@include banner;
-	li{
-		text-transform: uppercase;
-		font-size: 40px;
-		max-width: 500px;
-		margin: 60px 0;
+// flag background photo
+	#french-flag{
+		position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          z-index: -1;
 	}
 }
 
-#louvre-img{
-		background-image: url('../img/louvre.jpeg');
-		background-size:cover;
-		background-position: center center;
-		position:relative;
-		height: 50vh;
-		top:0;
-		bottom:0;
-		z-index:-1;
-	}
 
-	#overlay{
-		position:absolute;
-		background-color: $overlay;
-		top:0;
-		bottom:0;
-		height: 100%;
-		width: 100%;
-		z-index:1;
-	}
+// top background color black
+.top-bg{
+    position: absolute;
+	top: 5%;
+	left: 35%;
+	width: 55%;
+	height: 80vh;
+	background-color: #000;
 
+// top background photo
+	#above{
+      font-style: italic;
+      position: absolute;
+      color: #fff;
+      left: 67%;
+      bottom: 12%;
+    }
 
-#services{
-	margin-bottom: 60px;
+// top main photo description
+    #left{
+      font-style: italic;
+      position: absolute;
+      color: #fff;
+      left: 58%;
+      bottom: 3%;
+    }
 
-	li{
-		float:left;
-		box-sizing: border-box;
-		text-align: center;
-		width: (100% / 3);
-	}
+// top background photo
+    .bg-photos{
+      position: absolute;
+      top: 3%;
+      height: 60vh;
+      width: 45%;
+      left: 42%;
+      z-index: 2;
+    }
 
-	//img{
-	//	width: 60%;
-	//	margin:20px 20%;
-	//}
-
-	/*a {
-		text-decoration: none;
-		color: $deepBlue;
-		font-weight: bold;
-		&:hover{
-			color: complement($deepBlue);
-		}
-	}*/
-
-
-	ul{
-		@include clearFix;
-	}
+// top main photo
+    #top-photo{
+      position: absolute;
+      top: 18%;
+      height: 70vh;
+      width: 70%;
+      left: -14%;
+      z-index: 3;
+    }
 }
 
-#projects li{
-	@include grid(4, 2%);
-	img{
-		width: 100%;
-	}
-}
+// overlay on flag for text
+#flag-text-overlay{
+        top: 27%;
+        width: 20%;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 60%;
+        position: absolute; 
+        z-index: 1;
+        left: 8%;
+        }
+
+// 'Paris France' text
+div h2{
+        position: absolute;
+        color: #fff;
+        top: 30%;
+        left: 9%;
+        font-size: 2em;
+        z-index: 2;
+       }
+
+ // city of lights text at top 
+ #city-of-lights{
+    position: absolute;
+    color: #fff;
+    font-size: 1em;
+    top: 40%;
+    left: 9%;
+    z-index: 2;
+       }
+
+//top paris-text 
+    #paris-text{
+    position: absolute;
+    color: #fff;
+    top: 45%;
+    left: 9%;
+    width: 16%;
+    z-index: 2;
+       }
+
+// mid section text 
+#mid-section-text {
+    position: relative;
+    margin-top: 10%;
+    font-size: 4vw;
+    color: $lightgray;
+    text-align: center;
+    height: 300px;
+    }
+
+// mid section photo
+    #mid-section-photo{
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      border-top: 3px solid #000;
+      border-bottom: 3px solid #000;
+    }
+
+// bottom photos
+.photos{
+      position: relative;
+      margin-top: 20px;
+      width: 100%;
+      height: 155px;
+    }
+
+
+
+
+
+
+
+
