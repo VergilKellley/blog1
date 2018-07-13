@@ -1,5 +1,11 @@
 // Mixins
 
+@mixin photo-grid{
+	position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 160px;
+}
 
 
 
