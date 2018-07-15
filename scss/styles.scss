@@ -5,6 +5,7 @@
 
 body{
 	font-size: 1.2vw;
+  overflow-x:hidden;
 }
 
 // navagation
@@ -18,7 +19,7 @@ body{
         height: 51%;
         position: fixed; 
         z-index: 1;
-        left: 85%;
+        left: 90%;
 
 li a {
     display: block;
@@ -151,26 +152,38 @@ div h2{
 // mid section text 
 #mid-section-text {
     position: relative;
-    margin-top: 10%;
+    top:20%;
+    left:10%;
+    width:80%;
+    height:300px;
+    text-align:center;
     font-size: 4vw;
     color: $lightgray;
-    text-align: center;
-    height: 300px;
     }
 
 // mid section photo
     #mid-section-photo{
       position: relative;
-      width: 100%;
+      left:10%;
+      width: 80%;
       height: 50vh;
       border-top: 3px solid #000;
       border-bottom: 3px solid #000;
     }
 
+// mid section photo description
+#mid-section-photo-description{
+  @include mid-section-photo-description;
+}
+
 // bottom photos
 .photos{
-      @include photo-grid;
+      @include photo-gallery;
           }
+
+.photos2{
+  @include photo-gallery2;
+}
 
 
 
