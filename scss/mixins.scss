@@ -1,14 +1,37 @@
 // Mixins
 
-@mixin photo-grid{
+
+// mid section photo description
+@mixin mid-section-photo-description{
+	position:relative;
+	font-size: 1em;
+	font-style: italic;
+	color:$blackText;
+	margin-bottom:30%;
+
+}
+@mixin photo-gallery{
 	position: relative;
-    margin-top: 20px;
-    width: 100%;
+	text-align: center;
     height: 160px;
+    overflow: hidden;
+    margin-bottom:20px;
+}
+
+@mixin photo-gallery2{
+	position: relative;
+	text-align: center;
+    margin-top:20px;
+    height: 200px;
+    overflow: hidden;
 }
 
 
-
+//@mixin wrapper{
+//	position: relative;
+//	width: 100%;
+//	height: 100%;
+//}
 
 
 
