@@ -67,7 +67,7 @@ li a.active {
 	left: 35%;
 	width: 55%;
 	height: 80vh;
-	background-color: #000;
+	background-color: $blackText;
 
 // top background photo
 	#above{
@@ -167,8 +167,8 @@ div h2{
       left:10%;
       width: 80%;
       height: 50vh;
-      border-top: 3px solid #000;
-      border-bottom: 3px solid #000;
+      border-top: 3px solid $blackText;
+      border-bottom: 3px solid #blackText;
     }
 
 // mid section photo description
@@ -183,6 +183,18 @@ div h2{
 
 .photos2{
   @include photo-gallery2;
+}
+
+// footer
+
+footer{
+  position: relative;
+  width: 100%;
+  padding: 2%;
+  font-size: 2rem;
+  text-align:center;
+  color:$offWhite;
+  background-color: $blackText;
 }
 
 
