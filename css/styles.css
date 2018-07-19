@@ -168,7 +168,7 @@ div h2 {
   width: 80%;
   height: 50vh;
   border-top: 3px solid #000;
-  border-bottom: 3px solid #000;
+  border-bottom: 3px solid #blackText;
 }
 
 #mid-section-photo-description {
@@ -193,4 +193,14 @@ div h2 {
   margin-top: 20px;
   height: 200px;
   overflow: hidden;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  padding: 2%;
+  font-size: 2rem;
+  text-align: center;
+  color: #f8f9fb;
+  background-color: #000;
 }
